@@ -11,7 +11,7 @@ RUN npm ci --omit=dev
 # Copy build result to a new image.
 # This saves a lot of disk space.
 # FROM docker.io/library/node:18-alpine
-FROM amneziavpn/amnezia-wg:latest
+FROM amnezia-vpn/amneziawg-go:latest
 COPY --from=build_node_modules /app /app
 
 # Install Node.js
